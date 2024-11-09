@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://fxbftm3jrthl"]
+
+[ext_resource type="Script" path="res://scripts/arrow_manager.gd" id="1_0wa73"]
+
+[node name="ArrowManager" type="Node2D"]
+script = ExtResource("1_0wa73")
+
+[node name="HourArrow" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -30)
+width = 5.0
+
+[node name="MinutesArrow" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -40)
+width = 3.0
+default_color = Color(0.572988, 0.572988, 0.572988, 1)
+
+[node name="SecondsArrow" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -50)
+width = 1.0
+default_color = Color(0.98275, 6.08854e-06, 1.54018e-06, 1)

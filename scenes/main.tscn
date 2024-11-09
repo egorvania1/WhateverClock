@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://boe48sqj03ure"]
+
+[ext_resource type="PackedScene" uid="uid://fxbftm3jrthl" path="res://scenes/arrow_manager.tscn" id="1_4lowd"]
+[ext_resource type="PackedScene" uid="uid://dqplbrn5627" path="res://scenes/stopwatch_manager.tscn" id="2_ojh2j"]
+
+[node name="Main" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 400.0
+tab_alignment = 1
+current_tab = 0
+
+[node name="Clock" type="TabBar" parent="Control/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ArrowManager" parent="Control/TabContainer/Clock" instance=ExtResource("1_4lowd")]
+position = Vector2(149, 102)
+
+[node name="Timer" type="TabBar" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Stopwatch" type="TabBar" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="StopwatchManager" parent="Control/TabContainer/Stopwatch" instance=ExtResource("2_ojh2j")]
+layout_mode = 1
